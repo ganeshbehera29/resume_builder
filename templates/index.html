@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Resume Builder</h1>
+    <div class="container">
+        <div class="form-section">
+            <form id="resumeForm" method="POST">
+                <div class="header-form">
+                    <label for="name">Name:</label><input type="text" name="name" id="name" required><br><br>
+                    <label for="email">Email:</label><input type="email" name="email" id="email" required><br><br>
+                    <label for="phone">Phone:</label><input type="text" name="phone" id="phone" required><br><br>
+                    <label for="linkedin">LinkedIn:</label><input type="text" name="linkedin" id="linkedin"><br><br>
+                    <label for="address">Address:</label><input type="text" name="address" id="address"><br><br>
+                </div>
+
+                <div class="section-form">
+                    <h3>Experience</h3>
+                    <div id="experience-entries">
+                        <div class="experience-entry">
+                            <label for="jobTitle1">Job Title:</label><input type="text" name="jobTitle1" id="jobTitle1"><br><br>
+                            <label for="company1">Company:</label><input type="text" name="company1" id="company1"><br><br>
+                            <label for="datesExp1">Dates:</label><input type="text" name="datesExp1" id="datesExp1"><br><br>
+                            <label for="description1">Description:</label><br><textarea name="description1" id="description1" rows="4" cols="50"></textarea><br><br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-form">
+                    <h3>Education</h3>
+                    <div id="education-entries">
+                        <div class="education-entry">
+                            <label for="degree1">Degree:</label><input type="text" name="degree1" id="degree1"><br><br>
+                            <label for="institution1">Institution:</label><input type="text" name="institution1" id="institution1"><br><br>
+                            <label for="datesEdu1">Dates:</label><input type="text" name="datesEdu1" id="datesEdu1"><br><br>
+                            <label for="cgpa1">CGPA:</label><input type="text" name="cgpa1" id="cgpa1"><br><br>
+                        </div>
+                        <div class="education-entry">
+                            <label for="degree2">Degree:</label><input type="text" name="degree2" id="degree2"><br><br>
+                            <label for="institution2">Institution:</label><input type="text" name="institution2" id="institution2"><br><br>
+                            <label for="datesEdu2">Dates:</label><input type="text" name="datesEdu2" id="datesEdu2"><br><br>
+                            <label for="cgpa2">CGPA:</label><input type="text" name="cgpa2" id="cgpa2"><br><br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-form">
+                    <h3>Skills</h3>
+                    <label for="skills">Skills (comma-separated):</label><br><textarea name="skills" id="skills" rows="4" cols="50"></textarea><br><br>
+                </div>
+
+                <div class="section-form">
+                    <h3>Summary</h3>
+                    <label for="summary">Summary:</label><br><textarea name="summary" id="summary" rows="4" cols="50"></textarea><br><br>
+                </div>
+
+                <input type="submit" name="format" value="Generate Docx">
+                <input type="submit" name="format" value="Generate PDF">
+            </form>
+        </div>
+        <div class="preview-section">
+            <h2>Resume Preview</h2>
+            <div id="resumePreview"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

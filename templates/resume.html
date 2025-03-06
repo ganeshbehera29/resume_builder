@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume</title>
+    <style>
+        /* Add your CSS styles here or link to an external stylesheet */
+        body { font-family: sans-serif; }
+        /* ... other styles ... */
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="name">{{ data.name }}</div>
+        <div class="contact-info">
+            {% if data.address %}<p>{{ data.address }}</p>{% endif %}
+            {% if data.phone %}<p>Phone: {{ data.phone }}</p>{% endif %}
+            {% if data.email %}<p>Email: <a href="mailto:{{ data.email }}">{{ data.email }}</a></p>{% endif %}
+            {% if data.linkedin %}<p>LinkedIn: <a href="{{ data.linkedin }}" target="_blank">{{ data.linkedin }}</a></p>{% endif %}
+        </div>
+    </div>
+
+    <div class="section

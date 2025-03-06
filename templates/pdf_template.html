@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume</title>
+    <style>
+        /* ... (Your CSS Styles Here) ... */
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ data.name }}</h1>
+        <div class="contact-info">
+            {% if data.address %}<p>{{ data.address }}</p>{% endif %}
+            {% if data.phone %}<p>Phone: {{ data.phone }}</p>{% endif %}
+            {% if data.email %}<p>Email: <a href="mailto:{{ data.email }}">{{ data.email }}</a></p>{% endif %}
+            {% if data.linkedin %}<p>LinkedIn: <a href="{{ data.linkedin }}" target="_blank">{{ data.linkedin }}</a></p>{% endif %}
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Summary</h2>
+        <p>{{ data.summary }}</p>
+    </div>
+
+    <div class="section">
+        <h2>Experience</h2>
+        {% for exp in data.experiences %}
+        <div class="experience-entry">
+            <h3>{{ exp.job_title }}, {{ exp.company }}</h3>
+            <p class="dates">{{ exp.dates }}</p>
+            <p>{{ exp.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        {% for edu in data.educations %}
+        <div class="education-entry">
+            <h3>{{ edu.degree }}, {{ edu.institution }}</h3>
+            <p class="dates">{{ edu.dates }}</p>
+            <p>CGPA: {{ edu.cgpa }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            {% for skill in data.skills_list %}
+            <li class="skills-item">{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

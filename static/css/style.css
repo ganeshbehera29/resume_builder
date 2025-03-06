@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background: #f0f2c0; /* Light yellow background */
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Arrange form and preview side by side */
+    min-height: 80vh; /* Ensure container takes up full viewport height */
+}
+
+.form-section {
+    width: 50%; /* Set width for the form section */
+    padding: 20px;
+    overflow-y: auto;  /* Add scroll if form content overflows */
+    border-right: 1px solid #ccc; /* Add a separator line */
+}
+
+.preview-section {
+    width: 50%; /* Set width for the preview section */
+    padding: 20px;
+    overflow-y: auto; /* Add scroll if preview content overflows */
+    background-color: white; /* White background for preview */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0; /* Adjust spacing between contact info items */
+}
+
+.contact-info a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.entry {
+    margin-bottom: 10px;
+}
+
+/* Experience Styles */
+.experience-entry .experience-title {
+    font-weight: bold;
+}
+
+.experience-dates {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+/* Education Styles */
+.education-entry {
+    margin-bottom: 15px;
+}
+
+.education-entry .education-degree {
+    font-weight: bold;
+}
+
+.education-dates {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+/* Skills Styles */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 10px;
+}
+
+.skills-item {
+    margin-bottom: 5px;
+}
+
+/* Summary Styles */
+.summary {
+    text-align: justify; /* Justify the summary text */
+}
+
+/* Form Styles (adjust as needed) */
+.form-section label {
+    display: block; /* Place labels above inputs */
+    margin-bottom: 5px;
+}
+
+.form-section input,
+.form-section textarea {
+    width: calc(100% - 10px); /* Full width input, accounting for padding */
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.form-section textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
