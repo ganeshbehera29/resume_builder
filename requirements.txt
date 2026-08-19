@@ -1,0 +1,5 @@
+Flask>=2.0
+python-docx>=0.8.11
+docxtpl>=0.11.4
+pdfkit>=0.6.1
+# System dependency: wkhtmltopdf (install separately on the host)
